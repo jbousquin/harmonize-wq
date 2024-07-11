@@ -1,4 +1,4 @@
-name: Update Notebook
+sname: Update Notebook
 
 on:
   push:
@@ -30,10 +30,10 @@ jobs:
 
       - name: Update analysis notebook
         run: |
-          jupyter nbconvert --to notebook --execute demos/Harmonize_Pensacola_Detailed.ipynb --ExecutePreprocessor.kernel_name='python3' --output ../notebook_executed
+          jupyter nbconvert --to notebook --execute demos/Harmonize_Pensacola_Detailed.ipynb --ExecutePreprocessor.kernel_name='python3' --output ../demos/Harmonize_Pensacola_Detailed_run
       - name: commit updated notebook
         uses: EndBug/add-and-commit@v7
         with:
           author_name: nb update bot
           message: "Update Notebook"
-          add: "notebook_executed.ipynb"
+          add: "Harmonize_Pensacola_Detailed_run.ipynb"
