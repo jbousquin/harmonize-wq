@@ -36,4 +36,4 @@ jobs:
         with:
           author_name: nb update bot
           message: "Update Notebook"
-          add: "demos/Harmonize_Pensacola_Detailed_run.ipynb"
+          add: "notebook_executed.ipynb"
