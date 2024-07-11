@@ -1,4 +1,4 @@
-sname: Update Notebook
+name: Update Notebook
 
 on:
   push:
