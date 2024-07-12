@@ -30,10 +30,16 @@ jobs:
 
       - name: Update analysis notebook
         run: |
+          jupyter nbconvert --to notebook --execute demos/Harmonize_CapeCod_Detailed.ipynb --ExecutePreprocessor.kernel_name='python3' --output ../demos/Harmonize_CapeCod_Detailed
+          jupyter nbconvert --to notebook --execute demos/Harmonize_CapeCod_Simple.ipynb --ExecutePreprocessor.kernel_name='python3' --output ../demos/Harmonize_CapeCod_Simple
+          jupyter nbconvert --to notebook --execute demos/Harmonize_Pensacola.ipynb --ExecutePreprocessor.kernel_name='python3' --output ../demos/Harmonize_Pensacola
           jupyter nbconvert --to notebook --execute demos/Harmonize_Pensacola_Detailed.ipynb --ExecutePreprocessor.kernel_name='python3' --output ../demos/Harmonize_Pensacola_Detailed
+          jupyter nbconvert --to notebook --execute demos/Harmonize_Pensacola_Simple.ipynb --ExecutePreprocessor.kernel_name='python3' --output ../demos/Harmonize_Pensacola_Simple
+          jupyter nbconvert --to notebook --execute demos/Harmonize_Tampa_Detailed.ipynb --ExecutePreprocessor.kernel_name='python3' --output ../demos/Harmonize_Tampa_Detailed
+          jupyter nbconvert --to notebook --execute demos/Harmonize_Tampa_Simple.ipynb --ExecutePreprocessor.kernel_name='python3' --output ../demos/Harmonize_Tampa_Simple
       - name: commit updated notebook
         uses: EndBug/add-and-commit@v7
         with:
           author_name: nb update bot
           message: "Update Notebook"
-          add: "demos/Harmonize_Pensacola_Detailed.ipynb"
+          add: '["demos/Harmonize_CapeCod_Detailed.ipynb", "demos/Harmonize_CapeCod_Simple.ipynb", "demos/Harmonize_Pensacola.ipynb", "demos/Harmonize_Pensacola_Detailed.ipynb", "demos/Harmonize_Pensacola_Simple.ipynb", "demos/Harmonize_Tampa_Detailed.ipynb","demos/Harmonize_Tampa_Simple.ipynb"]'
