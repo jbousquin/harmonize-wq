@@ -8,10 +8,10 @@ updates:
   - package-ecosystem: "GitHub Actions" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "weekly"
+      interval: "hourly"
   - package-ecosystem: "pip"
     directory: "/" # in top dir
     schedule:
-      interval: "weekly"
+      interval: "hourly"
     labels:
       - 'dependencies'
