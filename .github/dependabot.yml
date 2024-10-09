@@ -5,13 +5,13 @@
 
 version: 2
 updates:
-  - package-ecosystem: "GitHub Actions" # See documentation for possible values
+  - package-ecosystem: "github-actions" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "hourly"
+      interval: "daily"
   - package-ecosystem: "pip"
     directory: "/" # in top dir
     schedule:
-      interval: "hourly"
+      interval: "daily"
     labels:
       - 'dependencies'
